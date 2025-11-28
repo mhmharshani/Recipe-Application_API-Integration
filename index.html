@@ -20,7 +20,7 @@
             </div>
             <div class="nav_bar_center">
                 <a href="index.html">Home</a>
-                <a href="recipes.html">Recipes</a>
+                <a href="recipes.html" id="recipe_link_nav_bar">Recipes</a>
                 <a href="">My Recipe Book</a>
             </div>
             <div class="nav_bar_right">
@@ -34,15 +34,18 @@
     <!-- Main Section -->
     <!-- Search bar -->
     <div class="container search_bar margin_redefined">
-        <div class="search_bar_div">
-            <input type="text">
-            <button><img src="assests/img/icon_search.png" alt=""></button>
+        <div class="row ">          
+            <div class="search_bar_div">
+                <input type="text" placeholder="Type Recipe Name" style="font-size: 14px;" id="txt_search">
+                <button id="button_search"><img src="assests/img/icon_search.png" alt=""></button>
+            </div>
+            
         </div>
     </div>
 
     <div class="container category_section margin_redefined">
         <div class="row">
-            <h5 style="margin-bottom: 15px; font-size: 18px; font-weight: normal;">Item Categories</h5>
+            <h5 style="margin-bottom: 15px; font-size: 18px; font-weight: normal;text-transform: uppercase; color: #353535;">Categories</h5>
         </div>
 
         <div class="row">
@@ -75,19 +78,20 @@
                 </ul>
             </div>
 
-            <div class="col-4">
-                
+            <div class="col-4 quote_box">
+                <h1 style="color: #78AE00;">SIMPLE & </h1>
+                <h1 style="color: #F6F6F6;">DELICIOUS</h1>
             </div>
 
         </div>
                 
         <div class="row mt-4">
-            <h5 style="margin-bottom: 15px; font-size: 18px; font-weight: normal;">All Recipes</h5>
+            <h5 style="margin-bottom: 15px; font-size: 18px; font-weight: normal;text-transform: uppercase; color: #353535;" id="category_type">All Recipes</h5>
         </div>
 
         <!-- <div class="album py-5 bg-body-tertiary"> -->
         <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="card_set">   
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3" id="card_set">   
 
                 <!-- Cards will be dynamically placed here -->
 

@@ -37,7 +37,7 @@ async function api_call_main(){
                             <p class="card-text" id="recipe_title">${title}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group"> <button type="button"
-                                        class="btn btn-sm btn-outline-secondary " id="button_recipe">View Recipe >></button> 
+                                        class="btn btn-sm btn-outline-secondary  button_details" id="button_recipe">View Recipe >></button> 
                                         
                                 </div> <small class="text-body-secondary" id="origin_tag">${origin_tag}</small>
                             </div>
@@ -62,21 +62,39 @@ api_call_main();
 
 // Use of Local Storage
 
-function store_data(data){
-    
-    const random_recipe = {
-        image : data.meals[0].strMealThumb,
-        ingredients : data.meals[0].strIngredient1,
-        instructions : data.meals[0].strInstructions
+let recipe_link_nav = document.getElementById("recipe_link_nav_bar");
+let url_stored = "";
+localStorage.setItem("recipe_url", url_stored);
+
+recipe_link_nav.addEventListener("click",e => {
+
+    if(localStorage.getItem("recipe_url")!==null){
+        localStorage.removeItem("recipe_url");
+        url_stored = "https://www.themealdb.com/api/json/v1/1/random.php";
+        localStorage.setItem("recipe_url", url_stored);
     }
-
-    localStorage.setItem("recipe_details",JSON.stringify(random_recipe));
-}
-
-function get_data(){
     
-    //const get_object = JSON.parse(localStorage.getItem("recipe_details"));
-}
+})
+
+let btn_search = document.getElementById("button_search");
+let txt_search = document.getElementById("txt_search");
+
+btn_search.addEventListener("click", e => {
+    let recipe_name = txt_search.value;
+    console.log(recipe_name);
+    
+    if(recipe_name!==null){
+        if(localStorage.getItem("recipe_url")!==null){
+            localStorage.removeItem("recipe_url");
+            url_stored = `https://www.themealdb.com/api/json/v1/1/search.php?s=${recipe_name}`;
+            localStorage.setItem("recipe_url", url_stored);
+            console.log("in card set local storage"+localStorage.getItem("recipe_url"));
+            
+        }
+        window.location.href = "recipes.html";
+    }
+});
+
 
 async function api_call_category(){
     await fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
@@ -190,7 +208,7 @@ async function api_call_id(id_array){
                             <p class="card-text" id="recipe_title">${title}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group"> <button type="button"
-                                        class="btn btn-sm btn-outline-secondary " id="button_recipe">View Recipe >></button> 
+                                        class="btn btn-sm btn-outline-secondary  button_details" id="button_recipe">View Recipe >></button> 
                                         
                                 </div> <small class="text-body-secondary" id="origin_tag">${origin_tag}</small>
                             </div>
@@ -204,6 +222,8 @@ async function api_call_id(id_array){
     
 }
 
+let category_type = document.getElementById("category_type");
+
 async function load_cards_dropdown(element){
     console.log("in load_card_dd");
     let category = element.innerText;
@@ -212,6 +232,8 @@ async function load_cards_dropdown(element){
     console.log("in click event : "+ id_array);
     
     await api_call_id(id_array);
+
+    category_type.innerText = category;
 }
 
 btn_cg_2.addEventListener("click", async e => {
@@ -288,3 +310,28 @@ category_dropdown.addEventListener("change", e => {
     }
 
 });
+
+card_set.addEventListener("click", function(event){
+
+    const clicked_card = event.target.closest(".card");
+
+    console.log(clicked_card);
+
+    const title = clicked_card.querySelector(".card-body p").innerText;
+    console.log(title);
+    
+
+    if(localStorage.getItem("recipe_url")!==null){
+        localStorage.removeItem("recipe_url");
+        url_stored = `https://www.themealdb.com/api/json/v1/1/search.php?s=${title}`;
+        localStorage.setItem("recipe_url", url_stored);
+        console.log("in card set local storage"+localStorage.getItem("recipe_url"));
+        
+    }
+
+    window.location.href = "recipes.html";
+
+
+    
+})
+

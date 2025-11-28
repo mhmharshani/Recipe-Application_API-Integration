@@ -20,7 +20,7 @@
             </div>
             <div class="nav_bar_center">
                 <a href="index.html">Home</a>
-                <a href="">Recipes</a>
+                <a href="" id="recipe_link_nav_bar">Recipes</a>
                 <a href="">My Recipe Book</a>
             </div>
             <div class="nav_bar_right">
@@ -39,8 +39,8 @@
                 <button class="btn button_back"><a href="index.html"><img src="assests/img/icon_back.png" alt="" width="20px"></a></button>
             </div>
             <div class="col search_bar">
-                <input type="text">
-                <button><img src="assests/img/icon_search.png" alt=""></button>
+                <input type="text" id="txt_search" placeholder="Type Recipe Name" style="font-size: 14px;">
+                <button id="button_search"><img src="assests/img/icon_search.png" alt=""></button>
             </div>
         </div>
         
@@ -48,17 +48,13 @@
 
     <div class="container margin_redefined">
         <div class="row" id="back_section">
- 
-            <div class="col add_recipe_btn">
-                <button class="btn btn-light " >ADD MY RECIPE <img src="assests/img/icon_add.png" alt="" width="30px"></button>
-            </div>
-        </div>
-        <div class="row mb-2" id="title_bar">
             <div class="col-6 title_bar">
                 <h5 class="fs-4" id="title">CHEESE PIZZA</h5>
             </div>
-            
-            
+ 
+            <div class="col-6 add_recipe_btn">
+                <button class="btn btn-light " >ADD MY RECIPE <img src="assests/img/icon_add.png" alt="" width="30px"></button>
+            </div>
         </div>
     </div>
 
@@ -67,7 +63,7 @@
             <div class="col-8" >
                 <div class="row" id="img_ingredient_section">
                     <div class="col" id="thumb_img_box">
-                        <img src="" alt="" id="thumb_img" width="50%" style="margin: 5px; border-radius: 5px;">
+                        <img src="" alt="" id="thumb_img" width="50%" height="95%" style="margin: 5px; border-radius: 5px;">
                     </div>
                     <div class="col" id="ingredient_box" >
                         <h5 style="font-size: 15px; font-weight: bold; padding: 10px;">Ingredients</h5>
@@ -105,6 +101,7 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="assests/js/app_recipe.js"></script>
+    
 </body>
 
 </html>

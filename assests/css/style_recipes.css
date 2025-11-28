@@ -129,7 +129,7 @@ body{
 .margin_redefined{
     margin-left: 1% !important;
     margin-right: 1% !important;
-    margin-top: 20px !important;
+    margin-top: 10px !important;
     width: 98% !important;
     max-width: none !important;
     /* background-color: aquamarine; */
@@ -143,6 +143,7 @@ body{
 #title{
     text-transform: uppercase;
     color: #353535;
+    padding-top: 10px;
 }
 
 
@@ -159,7 +160,7 @@ body{
     background-color:#81AD4E;
     min-height: 22vh;
     max-height: 35vh;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-right: 10px;
     border-radius: 10px;
 }
@@ -172,6 +173,7 @@ body{
     overflow-y: auto;
     margin-bottom: 20px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 #instruction_box{
