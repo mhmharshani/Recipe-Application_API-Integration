@@ -1,0 +1,38 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffebad032e7, pid=9552, tid=6524
+#
+# JRE version: Java(TM) SE Runtime Environment 18.9 (11.0.17+10) (build 11.0.17+10-LTS-269)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM 18.9 (11.0.17+10-LTS-269, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x3632e7]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 --module-path=D:\Manuja\iCET\0. ICD 119 Batch_2025\3. OOP\Day 08 - Abstraction\Final coursework\Submission\OOP_Final CW-OR24109484-Manuja Harshani\DefenseSystem\build\classes defensesystem.Starter
+
+Host: Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz, 4 cores, 7G,  Windows 10 , 64 bit Build 19041 (10.0.19041.4842)
+Time: Sun Nov 16 07:26:22 2025 Sri Lanka Standard Time elapsed time: 5.591158 seconds (0d 0h 0m 5s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001d09f9c5000):  JavaThread "Common-Cleaner" daemon [_thread_in_vm, id=6524, stack(0x00000007dd300000,0x00000007dd400000)]
+
+Stack: [0x00000007dd300000,0x00000007dd400000],  sp=0x00000007dd3ff690,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x3632e7]
+V  [jvm.dll+0x62b502]
+V  [jvm.dll+0x363daa]
+V  [jvm.dll+0x364037]
+V  [jvm.dll+0x3dd171]
+V  [jvm.dll+0x72b2c0]
+V  [jvm.dll+0x723e64]
+V  [jvm.dll+0x62a485]
+C  [ucrtbase.dll+0x21bb2]

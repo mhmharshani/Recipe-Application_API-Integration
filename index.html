@@ -12,15 +12,15 @@
 
 <body>
     <!-- Nav Bar -->
-    <div class="container-fluid">
-        <div class="row nav_bar_main_div">
+    <div class="container-fluid nav_bar_main_div">
+        <div class="row ">
             <div class="nav_bar_left">
                 <img src="assests/img/Logo.png" alt="" width="75px">
                 <label for="">RECIPE CLUB</label>
             </div>
             <div class="nav_bar_center">
                 <a href="index.html">Home</a>
-                <a href="">Recipes</a>
+                <a href="recipes.html">Recipes</a>
                 <a href="">My Recipe Book</a>
             </div>
             <div class="nav_bar_right">
@@ -28,9 +28,9 @@
                 <img src="assests/img/icon_login.png" alt="">
 
             </div>
-        </div>    
-    </div> 
-    
+        </div>
+    </div>
+
     <!-- Main Section -->
     <!-- Search bar -->
     <div class="container search_bar margin_redefined">
@@ -42,70 +42,61 @@
 
     <div class="container category_section margin_redefined">
         <div class="row">
-            <h5>Item Categories</h5>
+            <h5 style="margin-bottom: 15px; font-size: 18px; font-weight: normal;">Item Categories</h5>
         </div>
+
         <div class="row">
-            <div class="col-10 category_item">
-                <button><img src="assests/img/icon_all.png" alt=""></button>
-                <button><img src="assests/img/icon_main.png" alt=""></button>
-                <button><img src="assests/img/icon_bread.png" alt=""></button>
-                <button><img src="assests/img/icon_dessert.png" alt=""></button>
-                <button><img src="assests/img/icon_drinks.png" alt=""></button>
+            <div class="col-8">
+                <ul class="button-list">
+                    <li><button id="cg-1">All</button></li>
+                    <li><button id="cg-2">Button 2</button></li>
+                    <li><button id="cg-3">Button 3</button></li>
+                    <li><button id="cg-4">Button 4</button></li>
+                    <li><button id="cg-5">Button 5</button></li>
+
+                    <select class="custom-select" id="category_selector">
+                        <option selected id="title_dd" value="0">More Meal Categories</option>
+                        <option value="1" id="opt_1">One</option>
+                        <option value="2" id="opt_2">Two</option>
+                        <option value="3" id="opt_3">Three</option>
+                        <option value="4" id="opt_4">One</option>
+                        <option value="5" id="opt_5">Two</option>
+                        <option value="6" id="opt_6">Three</option>
+                        <option value="7" id="opt_7">One</option>
+                        <option value="8" id="opt_8">Two</option>
+                        <option value="9" id="opt_9">Three</option>
+                        <option value="10" id="opt_10">One</option>
+                        <option value="11" id="opt_11">Two</option>
+                        <option value="12" id="opt_12">Three</option>
+                        <option value="13" id="opt_13">One</option>
+                        <option value="14" id="opt_14">Two</option>
+                    </select>
+
+                </ul>
             </div>
-            <div class="col-2 dropdown_category">
-                <div class="dropdown ">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Select Category
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Popular</a></li>
-                        <li><a class="dropdown-item" href="#">Main Cousine</a></li>
-                        <li><a class="dropdown-item" href="#">Bakery</a></li>
-                    </ul>
-                </div>
+
+            <div class="col-4">
+                
             </div>
+
         </div>
+                
         <div class="row mt-4">
-            <h5>All Recipes</h5>
+            <h5 style="margin-bottom: 15px; font-size: 18px; font-weight: normal;">All Recipes</h5>
         </div>
 
-        <div class="row recipe_card">
-            <div class="col-9">
-                <div class="card-group gap-2">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="..." id="thumb_img">
-                        <div class="card-body">
-                            <h5 class="card-title" id="recipe_title">Chicken Salad</h5>
-                            <p class="card-text">Origin - Western</p>
-                            <a href="#" class="btn card_button">Recipe >></a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- <div class="album py-5 bg-body-tertiary"> -->
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="card_set">   
 
-            <div class="col-3 quote_line_1">
-                <h1 class="pt-5">SIMPLE<br>&<br>DELICIOUS</h1>
+                <!-- Cards will be dynamically placed here -->
+
             </div>
         </div>
+        <!-- </div> -->
     </div>
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
