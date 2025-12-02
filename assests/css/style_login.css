@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/poppins.regular.ttf");
+}
+
+body{
+    font-family: "Poppins";
+    color: #353535;
+    background-image: url("../img/BG.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;    
+}
+
+.home_page{    
+    display: flex; 
+}
+
+.display_area{
+    /* background-color: #F6F6F6; */
+    width: 35%;
+    height: 100vh; 
+}
+
+.form_area{
+    /* background-color: aqua; */
+    width: 65%;
+    height: 100vh;
+}
+
+#left_div{
+    background-color: #F6F6F6; 
+    opacity: 80%;
+    margin: 2%;
+    border-radius: 10px;
+}
+
+#left_div img{
+    margin-left: 35%;
+    margin-top: 100px;
+    
+}
+
+.tag_line{
+    background-color: #FBDE49; 
+    color: #353535;
+    width: 70%;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.tag_line p{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.join_us{
+    text-align: center;
+    margin-top: 85px;
+    padding-bottom: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #353535;
+}
+
+.txt_welcome{
+    text-align: center;
+    color: #FEFEFE;
+    font-size: 50px;
+    font-weight: 50px;
+    margin-top: 150px;
+    padding-top: 30px;
+}
+
+.club_name{
+    text-align: center;
+    color: #353535;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.input_name{
+    background-color: #FBDE49;
+    color: #353535;
+    border-radius: 10px;
+}
+
+.form_group{
+   display: flex;
+   justify-content: center;
+}
+
+.button_div button{
+    background-color: #F6F6F6;
+    color: #FD6A01;
+    font-weight: bold;
+}
+
+.nav_dashboard a{
+    background-color: #F8F8F8;
+    color: #383F53;
+    border: none;
+    margin-top: 50px;
+    border-radius: 30px;
+    margin-right: 20px;
+}

@@ -43,6 +43,11 @@ body{
     
 }
 
+.nav_bar_right a{
+    background-color: #FBDE49;
+    margin-left: 5px;
+}
+
 .nav_bar_center a{
     margin: 20px;
     text-decoration: none;

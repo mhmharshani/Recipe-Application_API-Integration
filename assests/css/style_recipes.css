@@ -9,9 +9,7 @@ body{
     background-image: url("../img/BG.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-
-    
+    background-size: cover;    
 }
 
 .container-fluid{
@@ -40,6 +38,11 @@ body{
     align-items: center;
     justify-content: end;
     
+}
+
+.nav_bar_right a{
+    background-color: #FBDE49;
+    margin-left: 5px;
 }
 
 .nav_bar_center a{
