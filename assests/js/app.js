@@ -314,24 +314,24 @@ category_dropdown.addEventListener("change", e => {
 card_set.addEventListener("click", function(event){
 
     const clicked_card = event.target.closest(".card");
+    const clicked_btn = event.target.closest("#button_recipe");
 
     console.log(clicked_card);
 
-    const title = clicked_card.querySelector(".card-body p").innerText;
-    console.log(title);
-    
+    if(clicked_btn!=null){
+        const title = clicked_card.querySelector(".card-body p").innerText;
+        console.log(title);
 
-    if(localStorage.getItem("recipe_url")!==null){
-        localStorage.removeItem("recipe_url");
-        url_stored = `https://www.themealdb.com/api/json/v1/1/search.php?s=${title}`;
-        localStorage.setItem("recipe_url", url_stored);
-        console.log("in card set local storage"+localStorage.getItem("recipe_url"));
-        
-    }
+        if(localStorage.getItem("recipe_url")!==null){
+            localStorage.removeItem("recipe_url");
+            url_stored = `https://www.themealdb.com/api/json/v1/1/search.php?s=${title}`;
+            localStorage.setItem("recipe_url", url_stored);
+            console.log("in card set local storage"+localStorage.getItem("recipe_url"));
+            
+        }
 
-    window.location.href = "recipes.html";
+        window.location.href = "recipes.html";
 
-
-    
+    }  
 })
 
